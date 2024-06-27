@@ -1,0 +1,200 @@
+body {
+  background-color: whitesmoke;
+}
+
+.container {
+  position: relative;
+}
+
+#colm {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.loadcontainer {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+
+.loadcontainer img {
+  margin-top: 150px;
+  width: 150px;
+  height: 150px;
+}
+
+.card {
+  border: none;
+  width: 300px;
+  height: 200px;
+  border: solid #8064a2;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px #8064a2;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+.card.show {
+  animation: slideup 0.5s forwards;
+}
+
+@keyframes slideup {
+  0% {
+    height: 200px;
+  }
+  100% {
+    height: 150px;
+  }
+}
+
+.card.hide {
+  animation: slidedown 0.5s forwards;
+}
+
+@keyframes slidedown {
+  0% {
+    height: 150px;
+  }
+  100% {
+    height: 200px;
+  }
+}
+
+.card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.image-container {
+  margin-left: 40%;
+  margin-bottom: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #8064a2;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.card-title {
+  font-size: 0.7rem;
+  margin-bottom: 8px;
+}
+
+.description-section {
+  width: 100%;
+  width: 300px;
+  height: 125px;
+  background-color: #fff;
+  padding: 15px;
+  margin-top: -18px;
+  margin-bottom: 5px;
+  text-align: center;
+  border: solid #8064a2;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px #8064a2;
+  transform: translateY(-200px);
+}
+
+.description-section.show {
+  animation: slideDown 1s forwards;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.description-section.hide {
+  animation: slideUp 0.5s forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-200px);
+  }
+}
+
+.descp {
+  font-size: 15px;
+}
+
+.button {
+  margin-top: -10px;
+  transition: transform 0.3s;
+  position: relative;
+}
+
+ion-icon {
+  font-size: 40px;
+  font-weight: normal;
+  color: #8064a2;
+  cursor: pointer;
+}
+
+.button.show ion-icon {
+  animation: show 0.5s forwards;
+}
+
+.button.hide ion-icon {
+  animation: hide 0.5s forwards;
+}
+
+@keyframes show {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes hide {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+#colm:hover {
+  .card {
+    background-color: #8064a2;
+    color: white;
+  }
+
+  .description-section {
+    background-color: #8064a2;
+    color: white;
+  }
+
+  ion-icon {
+    color: white;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #colm {
+    padding-left: 100px;
+  }
+}
+
+@media only screen and (max-width: 452px) {
+  #colm {
+    padding-left: 60px;
+  }
+}
